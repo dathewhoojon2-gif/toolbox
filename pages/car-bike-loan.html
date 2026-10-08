@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Car & Bike Loan Calculator - ToolBox</title>
+
+    <link rel="stylesheet"
+        href="../style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Toolbox</h1>
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="../index.html">Tools</a>
+
+            <a href="about.html">About</a>
+
+           <button id="themeToggle">🌙</button>
+
+        </nav>
+
+    </header>
+
+   <main>
+
+            <section class="calculator">
+
+
+            <h2>🚗 Car & Bike Loan Calculator</h2>
+
+            <p>
+                Calculate your vehicle loan EMI,
+                interest, and total repayment.
+            </p>
+
+
+            <!-- Vehicle Type -->
+
+            <div class="input-group">
+
+                <label for="vehicleType">
+                    Vehicle Type
+                </label>
+
+                <select id="vehicleType">
+
+                    <option value="car">
+                        🚗 Car
+                    </option>
+
+                    <option value="bike">
+                        🏍️ Bike
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Vehicle Price -->
+
+            <div class="input-group">
+
+                <label for="vehiclePrice">
+                    On-Road Price (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="vehiclePrice"
+                    placeholder="Enter vehicle price"
+                    min="1"
+                >
+
+            </div>
+
+
+            <!-- Down Payment -->
+
+            <div class="input-group">
+
+                <label for="downPayment">
+                    Down Payment (₹)
+                </label>
+
+                <input
+                    type="number"
+                    id="downPayment"
+                    placeholder="Enter down payment"
+                    min="0"
+                >
+
+            </div>
+
+
+            <!-- Interest -->
+
+            <div class="input-group">
+
+                <label for="vehicleInterest">
+                    Annual Interest Rate (%)
+                </label>
+
+                <input
+                    type="number"
+                    id="vehicleInterest"
+                    placeholder="Enter interest rate"
+                    min="0"
+                    step="0.01"
+                >
+
+            </div>
+
+
+            <!-- Tenure -->
+
+            <div class="input-group">
+
+                <label for="vehicleTenure">
+                    Loan Tenure (Years)
+                </label>
+
+                <input
+                    type="number"
+                    id="vehicleTenure"
+                    placeholder="Enter loan tenure"
+                    min="1"
+                    max="10"
+                >
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="button-group">
+
+                <button id="calculateVehicleLoanBtn">
+                    Calculate
+                </button>
+
+                <button id="clearVehicleLoanBtn">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- EMI Result -->
+
+            <div id="vehicleLoanResult"
+                class="percentage-result-card">
+
+                <p class="percentage-result-title">
+                    MONTHLY EMI
+                </p>
+
+                <div id="vehicleEmiValue">
+                    ₹--
+                </div>
+
+                <p id="vehicleEmiDetails">
+                    Enter your vehicle loan details
+                </p>
+
+            </div>
+
+
+            <!-- Loan Summary -->
+
+            <div id="vehicleLoanSummary"
+                class="emi-summary">
+
+                <div>
+
+                    <span>Vehicle Price</span>
+
+                    <strong id="vehiclePriceValue">
+                        ₹--
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Down Payment</span>
+
+                    <strong id="downPaymentValue">
+                        ₹--
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Loan Amount</span>
+
+                    <strong id="vehicleLoanAmountValue">
+                        ₹--
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Total Interest</span>
+
+                    <strong id="vehicleInterestValue">
+                        ₹--
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>Total Payment</span>
+
+                    <strong id="vehicleTotalPaymentValue">
+                        ₹--
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Down Payment Percentage -->
+
+            <div id="downPaymentInfo"
+                class="emi-breakdown">
+
+                <h3>💰 Down Payment</h3>
+
+                <p>
+                    You are paying
+                    <strong id="downPaymentPercentage">
+                        --%
+                    </strong>
+                    of the vehicle price upfront.
+                </p>
+
+            </div>
+
+
+            <!-- Repayment Schedule -->
+
+            <div id="vehicleRepaymentSection"
+                class="repayment-section">
+
+                <h3>
+                    📋 Monthly Repayment Schedule
+                </h3>
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Month</th>
+                                <th>EMI</th>
+                                <th>Principal</th>
+                                <th>Interest</th>
+                                <th>Balance</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="vehicleRepaymentTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <button
+                    id="vehicleShowMoreBtn"
+                    class="show-more-btn">
+
+                    Show More
+
+                </button>
+
+            </div>
+
+
+            <p class="calculator-note">
+
+                💡 <strong>Note:</strong>
+                Your actual vehicle loan offer may vary
+                depending on the lender, credit profile,
+                vehicle, fees, and other conditions.
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+     <footer>
+
+        <p>
+            &copy; 2026 Toolbox.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+        <script src="../js/car-bike-loan.js"></script>
+
+        <script src="../js/theme.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0">
+
+    <title>Age Calculator - Toolbox</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>Toolbox</h1>
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="../index.html#tools">Tools</a>
+
+            <a href="about.html">About</a>
+
+            <button id="themeToggle">🌙</button>
+
+        </nav>
+
+    </header>
+
+    <!-- Age Calculator -->
+
+    <main>
+
+        <section class="calculator">
+
+            <h2>Age Calculator</h2>
+
+            <p> Calculate your exact age using your date of birth.</p>
+
+            <div class="input-group">
+
+                <label for="birthDate">
+                    Date of Birth
+                </label>
+
+                <input 
+                    type="date"
+                    id="birthDate">
+
+            </div>
+
+            <div class="button-group">
+
+                <button id="calculateAgeBtn">
+                    Calculate Age
+                </button>
+
+                <button id="clearAgeBtn">
+                    Clear
+                </button>
+
+            </div>
+
+            <!-- Result -->
+
+            <div id="ageResult"
+                class="age-result-card">
+
+                <p class="age-result-title">
+                    Your Age
+                </p>
+
+                <div id="ageValue">
+                    --
+                </div>
+
+                <p class="age-years-label">
+                    Years
+                </p>
+
+                <div id="ageDetails">
+                    Enter your date of birth
+                </div>
+
+            </div>
+
+            <div id="birthdayResult"
+            class="birthday-card">
+
+                <p class="birthday-title">
+                    Next Birthday
+                </p>
+
+                <div class="birthday-icon">
+                    🎂
+                </div>
+
+                <div id="birthdayDate">
+                    --
+                </div>
+
+                <div id="birthdayDays">
+                    --
+                </div>
+
+                <p class="birthday-label">
+                    days remaining
+                </p>
+        
+        </div>
+
+        <div id="birthDayResult"
+        class="birthday-card">
+
+          <p class="birthday-title">
+            Day of Birth
+          </p>
+
+          <div id="birthDayValue">
+            --
+          </div>
+    
+    </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy; 2026 Toolbox.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+    <script src="../js/age.js"></script>
+
+    <script src="../js/theme.js"></script>
+
+
+</body>
+
+</html>

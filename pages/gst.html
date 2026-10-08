@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>GST Calculator - ToolBox</title>
+
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body>
+
+         <!-- Header -->
+
+    <header>
+
+        <h1>Toolbox</h1>
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="../index.html">Tools</a>
+
+            <a href="about.html">About</a>
+
+           <button id="themeToggle">🌙</button>
+
+        </nav>
+
+    </header>
+
+        <main> 
+            
+            <section class="calculator">
+
+                <h2>GST Calculator</h2>
+
+                <p>Calculate GST amouont and the final price.</p>
+
+                <div class="input-group">
+
+                    <label for="amount">
+                        Amount (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="=Enter amount" min="0">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="gstRate">
+                        GST Rate (%)
+                    </label>
+
+                    <select id="gstRate">
+
+                        <option value="5">5%</option>
+
+                        <option value="12">12%</option>
+
+                        <option value="18">18%</option>
+
+                        <option value="28">28%</option>
+
+                    </select>
+
+                </div>
+
+                <div class="button-group">
+
+                    <button id="calculateGstBtn">Calculate</button>
+
+                    <button id="clearGstBtn">Clear</button>
+
+                </div>
+
+                <div id="gstResult" class="percentage-result-card">
+
+                    <p class="percentage-result-title">GST Result</p>
+
+                    <div id="gstAmount">₹--</div>
+
+                    <p id="gstDetails">
+                        Enter an amount and calculate
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+        
+        <footer>
+
+        <p>
+            &copy; 2026 Toolbox.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+        <script src="../js/gst.js"></script> 
+        
+        <script src="../js/theme.js"></script>
+
+    </body>
+</html>

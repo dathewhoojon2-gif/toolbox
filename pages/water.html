@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Water Intake Calculator - ToolBox</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>ToolBox</h1>
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="../index.html">Tools</a>
+
+            <a href="about.html">About</a>
+
+            <button id="themeToggle">🌙</button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Water Intake Calculator -->
+
+    <main>
+
+        <section class="calculator">
+
+
+            <h2>💧 Water Intake Calculator</h2>
+
+            <p>
+                Estimate how much water you should drink
+                each day based on your body weight.
+            </p>
+
+
+            <!-- Weight -->
+
+            <div class="input-group">
+
+                <label for="waterWeight">
+                    Weight (kg)
+                </label>
+
+                <input
+                    type="number"
+                    id="waterWeight"
+                    placeholder="Enter your weight"
+                    min="1"
+                    step="0.1">
+
+            </div>
+
+
+            <!-- Activity -->
+
+            <div class="input-group">
+
+                <label for="activityLevel">
+                    Activity Level
+                </label>
+
+                <select id="activityLevel">
+
+                    <option value="low">
+                        Low Activity
+                    </option>
+
+                    <option value="moderate">
+                        Moderate Activity
+                    </option>
+
+                    <option value="high">
+                        High Activity
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="button-group">
+
+                <button id="calculateWaterBtn">
+                    Calculate
+                </button>
+
+                <button id="clearWaterBtn">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- Result -->
+
+            <div id="waterResult" class="water-result-card">
+                
+                <p class="water-result-title">
+                    💧 DAILY WATER INTAKE
+                </p>
+                
+                <div class="water-icon">
+                    💧
+                </div>
+                
+                <div id="waterAmount">
+                     --
+                </div>
+                
+                <p class="water-unit">
+                   litres per day</p>
+                   
+                   <div class="water-glasses">
+                    <span class="glasses-icon">🥤</span>
+                    
+                    <div>
+                        <strong id="waterGlasses">-- glasses</strong>
+
+                        <p>approximately 250 ml per glass</p>
+                    
+                    </div><br><br>
+
+                    <p id="waterDetails">
+                    Enter your weight and calculate
+                    </p>
+                
+                </div>
+                
+                <div class="water-divider"></div>
+            
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 ToolBox.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="../js/water.js"></script>
+
+    <script src="../js/theme.js"></script>
+
+</body>
+
+</html>

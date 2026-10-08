@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>EMI Calculator - ToolBox</title>
+
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body>
+
+         <!-- Header -->
+
+    <header>
+
+        <h1>Toolbox</h1>
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+            
+            <a href="../index.html">Tools</a>
+            
+            <a href="about.html">About</a>
+
+           <button id="themeToggle">🌙</button>
+
+        </nav>
+
+    </header>
+
+        <main>
+
+            <section class="calculator">
+
+                <h2>EMI Calculator</h2>
+
+                <p>Calculate your monthly loan EMI, total interest, and total payment.</p>
+
+                <!-- Loan Amount -->
+
+                <div class="input-group">
+
+                    <label for="loanAmount">
+                        Loan Amount (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="loanAmount"
+                        placeholder="Enter loan amount" 
+                        min="0">
+
+                </div>
+
+                <!-- Interest Rate -->
+
+                <div class="input-group">
+
+                    <label for="interestRate">
+                        Annual Interest Rate (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="interestRate"
+                        palceholder="Enter interest rate"
+                        min="0"
+                        step="0.01">
+
+                </div>
+
+                <!-- Loan Tenure -->
+
+                <div class="input-group">
+
+                    <label for="loanTenure">
+                        Loan Tenure (Years)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="loanTenure"
+                        placeholder="Enter loan tenure"
+                        min="1">
+
+                </div>
+
+                <!-- Button -->
+
+                <div class="button-group">
+
+                    <button id="calculateEmiBtn">
+                        Calculate
+                    </button>
+
+                    <button id="clearEmiBtn">
+                        Clear
+                    </button>
+
+                </div>
+
+                <!-- Result -->
+
+                <div id="emiResult" class="percentage-result-card">
+
+                    <p class="percentage-result-title">
+                        Monthly EMI
+                    </p>
+
+                    <div id="emiValue">
+                        ₹--
+                    </div>
+
+                    <p id="emiDetails">
+                        Enter your loan details and calculate
+                    </p>
+
+                </div>
+
+                <!-- Loan Summary -->
+
+                <div id="emiSummary" class="emi-summary">
+
+                    <div>
+                        <span>Principal Amount</span>
+
+                        <strong id="principalValue">₹--</strong>
+                    </div>
+
+                    <div>
+                        <span>Total Interest</span>
+
+                        <strong id="interestValue">₹--</strong>
+                    </div>
+
+                    <div>
+                        <span>Total Payment</span>
+
+                        <strong id="totalPaymentValue">₹--</strong>
+                    </div>
+
+                </div>
+
+
+
+               
+                <!-- Repayment Schedule -->
+
+                <div id="repaymentSection" class="repayment-section">
+
+                    <h3>Monthly Repayment Schedule</h3>
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Month</th>
+                                    <th>EMI</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>Balance</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="repaymentTableBody"></tbody>
+
+                        </table>
+
+                    </div>
+
+                    <button id="showMoreBtn" class="show-more-btn">
+                        Show More
+                    </button>
+                    
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+        <p>
+            &copy; 2026 Toolbox.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+        <script src="../js/emi.js"></script>
+
+        <script src="../js/theme.js"></script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,2161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background-color: white;
+
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    font-size: 26px;
+    letter-spacing: -1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #666;
+}
+
+nav button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Search */
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px 0 0 10px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #222;
+}
+
+.search-box button {
+    padding: 15px 22px;
+
+    border: none;
+    border-radius: 0 10px 10px 0;
+
+    background-color: #222;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+/*Tools */
+
+.tools {
+    padding: 50px 8%;
+}
+
+.tools h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tool-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tool-card {
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.tool-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tool-card a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+
+    margin-top: 50px;
+
+    background-color: white;
+}
+
+@media (max-width: 900px) {
+
+    .tool-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .search-box input {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+    }
+
+    .search-box button {
+        border-radius: 10px;
+    }
+
+    .tool-container {
+        grid-template-columns: 1fr;
+    }
+
+    .bmi-scale {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.calculator {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.calculator h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calculator > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#calculateBtn {
+    background-color: #222;
+    color: white;
+}
+
+#calculateBtn {
+    background-color: #e5e5e5;
+    color: #222;
+}
+
+
+
+.button-group button {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button-group button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+#result {
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.result-card {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background-color: #f5f5f5;
+
+    border: 2px solid #e5e5e5;
+
+    opacity: 0.7;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.result-card.show {
+    opacity: 1;
+
+    transform: translateY(-3px);
+}
+
+.result-title {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+#bmiValue {
+    font-size: 48px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+#bmiCategory {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.result-card.underweight {
+    background-color: #eef4ff;
+    border-color: #b8cfff;
+}
+
+.result-card.normal {
+    background-color: #eefaf1;
+    border-color: #b8e0c0;
+}
+
+.result-card.overweight {
+    background-color: #fff8e6;
+    border-color: #f0d58a;
+}
+
+.result-card.obesity {
+    background-color: #fff0f0;
+    border-color: #e5aaaa;
+}
+
+.bmi-reference {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e5e5;
+}
+
+.bmi-reference h3 {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+.bmi-scale {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+.scale-item {
+    padding: 15px 10px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+}
+
+.scale-item:hover {
+     transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+.scale-item span {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.scale-item strong {
+    font-size: 14px;
+}
+
+.underweight-scale {
+    background-color: #eef4ff;
+}
+
+.normal-scale {
+    background-color: #eefaf1;
+}
+
+.overweight-scale {
+    background-color: #fff8e6;
+}
+
+.obesity-scale {
+    background-color: #fff0f0;
+}
+
+.age-result-card {
+    margin-top: 30px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background-color: #f5f5f5;
+
+    border: 2px solid #e5e5e5;
+
+    opacity: 0.7;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.age-result-card.show {
+    opacity: 1;
+
+    transform: translateY(-3px);
+}
+
+.age-result-title {
+    margin: 0 0 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+#ageValue {
+    font-size: 56px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    margin-top: 10px;
+}
+
+.age-years-label {
+    margin: 8px 0 20px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+#ageDetails {
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+.birthday-card {
+    margin-top: 20px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background-color: #fff8e6;
+
+    border: 2px solid #f0d58a;
+
+    opacity: 0.7;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.birthday-card.show {
+    opacity: 1;
+
+    transform: translateY(-3px);
+}
+
+.birthday-title {
+    margin: 0 0 15px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.birthday-icon {
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+#birthdayDate {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+#birthdayDays {
+    font-size: 42px;
+
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+.birthday-label {
+    margin: 8px 0 0;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+#birthDayValue {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    nav button {
+        padding: 20px 12px;
+    }
+
+    main {
+        padding: 20px 12px;
+    }
+
+    .calculator h2 {
+        font-size: 24px;
+    }
+
+    .calculator > p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .input-group input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .button-group {
+        gap: 8px;
+    }
+
+    .button-group button {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .age-result-card {
+        padding: 25px 15px;
+    }
+
+    #ageValue {
+        font-size: 48px;
+    }
+
+    #ageDetails {
+        font-size: 15px;
+    }
+
+    .birthday-card {
+        padding: 22px 15px;
+    }
+
+    #birthdayDate {
+        font-size: 18px;
+    }
+
+    #birthdayDays {
+        font-size: 36px;
+    }
+
+    #birthDayValue {
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    
+}
+
+@media (max-width: 600px) {
+
+    .bmi-reference {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .bmi-scale {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        width: 100%;
+    }
+
+    .scale-item {
+        width: auto;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 12px 6px;
+        text-align: center;
+    }
+
+}
+
+.percentage-result-card {
+    margin-top: 25px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background-color: #f5f5f5;
+
+    border: 2px solid #e5e5e5;
+
+    opacity: 0.7;
+
+    transition:
+         transform 0.3s ease,
+         opacity 0.3s ease;
+}
+
+.percentage-result-card.show {
+    opacity: 1;
+
+    transform: translateY(-3px);
+}
+
+.percentage-result-title {
+    margin: 0 0 12px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+#percentageResultValue {
+    font-size: 48px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    margin: 10px 0;
+}
+
+#percentageResultDetails {
+    margin: 10px 0 0;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+
+    .percentage-result-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 22px 15px;
+        margin-top: 20px;
+    }
+
+    #percentageResultValue {
+        font-size: 42px;
+    }
+
+    #percentageResultDetails {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .percentage-section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .percentage-option {
+        padding: 15px;
+
+        gap: 12px;
+    }
+
+    .percentage-option-icon {
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+    .percentage-option-content h3 {
+        font-size: 16px;
+    }
+
+    .percentage-option-content p {
+        font-size: 13px;
+    }
+
+    .percentage-option-content span {
+        font-size: 12px;
+    }
+}
+
+/* Percentage Calculator Menu */
+
+.perecatge-menu {
+    max-width: 700px;
+}
+
+.percentage-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    border: 1px solid #ddd;
+
+    border-radius: 14px;
+
+    background-color: #fff;
+
+    transition: 
+         transform 0.2s ease,
+         box-shadow 0.2s ease;
+}
+
+.percentage-option:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.percentage-option-icon {
+    width: 55px;
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color: #f0f0f0;
+
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+.percentage-option-content h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+}
+
+.percentage-option-content p {
+    margin:  0 0 6px;
+
+    font-size: 14px;
+}
+
+.percentage-option-content span {
+    font-size: 13px;
+
+    opacity: 0.6s;
+}
+
+.back-link {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.back-link:hover {
+    background-color: #e9e9e9;
+
+    transform: translateX(-3px);
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0.08);
+}
+
+
+.emi-summary {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background-color: #f5f5f5;
+
+    border: 2px solid #e5e5e5;
+}
+
+.emi-summary.show {
+    display: block;
+}
+
+.emi-summary div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.emi-summary div:last-child {
+    border-bottom: none;
+}
+
+.emi-summary span {
+    font-size: 14px;
+}
+
+.emi-summary strong {
+    font-size: 15px;
+}
+
+/* EMI Breakdown */
+
+.emi-breakdown {
+    display: none;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background-color: #f5f5f5;
+    border: 2px solid #e5e5e5;
+}
+
+.emi-breakdown.show {
+    display: block;
+}
+
+.emi-breakdown h3,
+.repayment-section h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+
+/* Repayment Schedule */
+
+.repayment-section {
+    display: none;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background-color: #f5f5f5;
+    border: 2px solid #e5e5e5;
+}
+
+.repayment-section.show {
+    display: block;
+}
+
+
+/* Table */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.repayment-section table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 600px;
+}
+
+.repayment-section th,
+.repayment-section td {
+    padding: 12px 10px;
+
+    text-align: right;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 14px;
+}
+
+.repayment-section th:first-child,
+.repayment-section td:first-child {
+    text-align: center;
+}
+
+.repayment-section th {
+    font-weight: 700;
+}
+
+.hidden-repayment-row {
+    display: none;
+}
+
+
+.show-more-btn {
+    display: none;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.show-more-btn:hover {
+    background-color: #e9e9e9;
+
+    transform: translateY(-2px);
+}
+
+.recommended-loan {
+    margin-top: 15px;
+}
+
+.loan-disclaimer {
+    margin-top: 15px;
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    background-color: #f8f8f8;
+    border: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+.about-card {
+    max-width: 800px;
+    text-align: left;
+}
+
+.about-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+.about-card p {
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CAR & BIKE LOAN CALCULATOR
+======================================== */
+
+.calculator-note {
+    margin-top: 20px;
+    padding: 12px 14px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: #777;
+
+    background-color: #f5f5f5;
+
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+
+/* ========================================
+   VEHICLE LOAN SUMMARY
+======================================== */
+
+#vehicleLoanSummary {
+    display: none;
+}
+
+#vehicleLoanSummary.show {
+    display: block;
+}
+
+/* ========================================
+   WATER INTAKE RESULT CARD
+======================================== */
+
+.water-result-card {
+    margin-top: 28px;
+    padding: 28px 20px;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #eaf8ff,
+        #f7fcff
+    );
+
+    border: 1px solid #b9e5f7;
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+/* Result title */
+
+.water-result-title {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    color: #555;
+}
+
+
+/* Water icon */
+
+.water-icon {
+    font-size: 48px;
+    margin: 12px 0 4px;
+}
+
+
+/* Main water amount */
+
+#waterAmount {
+    font-size: 48px;
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    color: #168aad;
+
+    margin-top: 4px;
+}
+
+
+/* Unit */
+
+.water-unit {
+    margin: 5px 0 18px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #666;
+}
+
+
+/* Divider */
+
+.water-divider {
+    width: 70%;
+    height: 1px;
+
+    margin: 0 auto 16px;
+
+    background-color: #c9e8f3;
+}
+
+
+/* Details */
+
+#waterDetails {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #666;
+}
+
+/* ========================================
+   Calories SUMMARY
+======================================== */
+
+#calorieSummary {
+    display: none;
+}
+
+#calorieSummary.show {
+    display: grid;
+}
+
+/* ==============================
+   CALORIE DIET PLAN
+============================== */
+
+.diet-plan {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+}
+
+.diet-plan.show {
+    display: block;
+}
+
+.diet-plan h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+#dietPlanIntro {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.diet-meal {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.diet-meal:last-child {
+    border-bottom: none;
+}
+
+.meal-icon {
+    font-size: 24px;
+    min-width: 32px;
+}
+
+.diet-meal h4 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.diet-meal p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .diet-plan {
+        padding: 16px;
+    }
+
+    .diet-meal {
+        gap: 10px;
+    }
+
+    .diet-meal p {
+        font-size: 13px;
+    }
+
+}
+
+/* ==============================
+   MEAL NUTRITION
+============================== */
+
+.meal-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.meal-nutrition {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1976d2;
+}
+
+/* ==============================
+   DIET TARGET SUMMARY
+============================== */
+
+.diet-target-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 18px 0 10px;
+}
+
+.diet-target-summary div {
+    padding: 12px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+}
+
+.diet-target-summary span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.diet-target-summary strong {
+    font-size: 15px;
+}
+
+.portion-adjustment-note {
+    margin: 10px 0 18px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: #eef6ff;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+
+@media (max-width: 600px) {
+    .diet-target-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+
+/* Header */
+
+body.dark-mode header {
+    background-color: #1c1c1c;
+    border-bottom-color: #333;
+}
+
+
+/* Navigation */
+
+body.dark-mode nav a {
+    color: #f5f5f5;
+}
+
+
+/* Cards */
+
+body.dark-mode .calculator,
+body.dark-mode .tool-card {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    border-color: #333;
+}
+
+
+/* Paragraphs */
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+
+/* Inputs */
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+}
+
+
+/* Input placeholder */
+
+body.dark-mode input::placeholder {
+    color: #999;
+}
+
+
+/* Labels */
+
+body.dark-mode label {
+    color: #eee;
+}
+
+
+/* Results */
+
+body.dark-mode .age-result-card,
+body.dark-mode .birthday-card,
+body.dark-mode .percentage-result-card,
+body.dark-mode .emi-summary,
+body.dark-mode .emi-breakdown,
+body.dark-mode .repayment-section {
+    background-color: #242424;
+    border-color: #3a3a3a;
+}
+
+
+/* Tables */
+
+body.dark-mode table {
+    color: #eee;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+    border-color: #444;
+}
+
+
+/* Disclaimer */
+
+body.dark-mode .loan-disclaimer {
+    background-color: #242424;
+    border-color: #444;
+    color: #aaa;
+}
+
+body.dark-mode .loan-disclaimer strong {
+    color: #eee;
+}
+
+
+/* Donut center */
+
+body.dark-mode .donut-chart::before {
+    background-color: #242424;
+}
+
+
+/* Back button */
+
+body.dark-mode .back-link {
+    color: #eee;
+}
+
+/* ========================================
+   DARK MODE - FINAL OVERRIDES
+======================================== */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+
+/* Header */
+
+body.dark-mode header {
+    background-color: #1b1b1b;
+    color: #f5f5f5;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode header h1 {
+    color: #f5f5f5;
+}
+
+
+/* Navigation */
+
+body.dark-mode nav a {
+    color: #f5f5f5;
+}
+
+body.dark-mode nav a:hover {
+    color: #aaa;
+}
+
+
+/* Main calculator cards */
+
+body.dark-mode .calculator,
+body.dark-mode .tool-card {
+    background-color: #1e1e1e !important;
+    color: #f5f5f5 !important;
+    border-color: #333 !important;
+}
+
+
+/* Headings */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #f5f5f5 !important;
+}
+
+
+/* Paragraphs */
+
+body.dark-mode p {
+    color: #ccc;
+}
+
+
+/* Labels */
+
+body.dark-mode label {
+    color: #f5f5f5 !important;
+}
+
+
+/* Inputs */
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #292929 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode input::placeholder {
+    color: #999;
+}
+
+
+/* Buttons */
+
+body.dark-mode button {
+    background-color: #292929;
+    color: #f5f5f5;
+    border-color: #444;
+}
+
+body.dark-mode button:hover {
+    background-color: #383838;
+}
+
+
+/* Back buttons */
+
+body.dark-mode .back-link {
+    background-color: #292929 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+
+/* ========================================
+   BMI
+======================================== */
+
+body.dark-mode .result-card {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .result-card * {
+    color: #f5f5f5 !important;
+}
+
+
+/* ========================================
+   BMI REFERENCE COLORS - DARK MODE
+======================================== */
+
+body.dark-mode .bmi-reference {
+    background: #222222 !important;
+    border: 1px solid #3a3a3a !important;
+    color: #ffffff;
+}
+
+body.dark-mode .bmi-reference h3 {
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode .scale-item span {
+    color: #222222;
+}
+
+body.dark-mode .underweight-scale {
+    color: #64b5f6 !important;
+}
+
+body.dark-mode .underweight-scale strong {
+    color: #222222 !important;
+}
+
+
+body.dark-mode .normal-scale {
+    color: #66bb6a !important;
+}
+
+body.dark-mode .normal-scale strong {
+    color: #222222 !important;
+}
+
+
+body.dark-mode .overweight-scale {
+    color: #ffb74d !important;
+}
+
+body.dark-mode .overweight-scale strong {
+    color: #222222 !important;
+}
+
+
+body.dark-mode .obesity-scale {
+    color: #ef5350 !important;
+}
+
+body.dark-mode .obesity-scale strong {
+    color: #222222 !important;
+}
+
+/* ========================================
+   AGE CALCULATOR
+======================================== */
+
+body.dark-mode .age-result-card,
+body.dark-mode .birthday-card {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .age-result-card *,
+body.dark-mode .birthday-card * {
+    color: #f5f5f5 !important;
+}
+
+
+/* ========================================
+   PERCENTAGE CALCULATOR
+======================================== */
+
+body.dark-mode .percentage-result-card {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .percentage-result-card * {
+    color: #f5f5f5 !important;
+}
+
+
+/* Percentage selection cards */
+
+body.dark-mode .percentage-option,
+body.dark-mode .percentage-option-icon {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .percentage-option * {
+    color: #f5f5f5 !important;
+}
+
+
+/* ========================================
+   EMI
+======================================== */
+
+body.dark-mode .emi-summary,
+body.dark-mode .emi-breakdown,
+body.dark-mode .repayment-section {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .emi-summary *,
+body.dark-mode .emi-breakdown *,
+body.dark-mode .repayment-section * {
+    color: #f5f5f5 !important;
+}
+
+
+/* Tables */
+
+body.dark-mode table {
+    color: #f5f5f5 !important;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+
+/* Loan disclaimer */
+
+body.dark-mode .loan-disclaimer {
+    background-color: #242424 !important;
+    color: #aaa !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .loan-disclaimer strong {
+    color: #f5f5f5 !important;
+}
+
+
+/* Footer */
+
+body.dark-mode footer {
+    background-color: #1b1b1b;
+    color: #ccc;
+    border-top-color: #333;
+}
+
+body.dark-mode footer p {
+    color: #ccc;
+}
+
+
+/* ========================================
+   CAR & BIKE LOAN CALCULATOR
+======================================== */
+
+body.dark-mode .calculator-note {
+    color: #aaa;
+
+    background-color: #252525;
+
+    border-color: #3a3a3a;
+}
+
+
+#downPaymentInfo {
+    margin-top: 20px;
+}
+
+
+#downPaymentInfo p {
+    margin: 0;
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+body.dark-mode #downPaymentInfo p {
+    color: #aaa;
+}
+
+
+#downPaymentPercentage {
+    color: #1976d2;
+
+    font-weight: 700;
+}
+
+
+body.dark-mode #downPaymentPercentage {
+    color: #8ab4f8;
+
+}
+
+/* ========================================
+   WATER RESULT - DARK MODE
+======================================== */
+
+body.dark-mode .water-result-card {
+    background: linear-gradient(
+        145deg,
+        #1d3038,
+        #202020
+    );
+
+    border-color: #31515c;
+}
+
+body.dark-mode .water-result-title {
+    color: #ddd;
+}
+
+body.dark-mode #waterAmount {
+    color: #55c7e8;
+}
+
+body.dark-mode .water-unit {
+    color: #bbb;
+}
+
+body.dark-mode .water-divider {
+    background-color: #3b555e;
+}
+
+body.dark-mode #waterDetails {
+    color: #bbb;
+}
+
+
+/* ==============================
+   CALORIE DIET PLAN - Dark Mode
+============================== */
+
+body.dark-mode .diet-plan {
+    background-color: #222222;
+    border-color: #3a3a3a;
+}
+
+body.dark-mode #dietPlanIntro {
+    color: #aaa;
+}
+
+body.dark-mode .diet-meal {
+    border-color: #3a3a3a;
+}
+
+body.dark-mode .diet-meal p {
+    color: #aaa;
+}
+
+/* ==============================
+   MEAL NUTRITION  - Dark Mode
+============================== */
+
+body.dark-mode .meal-nutrition {
+    color: #8ab4f8;
+}
+
+/* ========================================
+   Calorie Result - DARK MODE
+======================================== */
+
+body.dark-mode .diet-target-summary div {
+    background-color: #2a2a2a;
+    border-color: #3a3a3a;
+}
+
+body.dark-mode .diet-target-summary span {
+    color: #aaa;
+}
+
+body.dark-mode .portion-adjustment-note {
+    background-color: #1f2b38;
+    color: #bbb;
+}
+
+/* ========================================
+   OPEN TOOL - GOOGLE STYLE BLUE
+======================================== */
+
+/* Light mode */
+.tool-card a {
+    color: #1a0dab !important;
+    font-weight: 600;
+}
+
+.tool-card a:hover {
+    color: #174ea6 !important;
+}
+
+
+/* Dark mode */
+body.dark-mode .tool-card a {
+    color: #8ab4f8 !important;
+    font-weight: 600;
+}
+
+body.dark-mode .tool-card a:hover {
+    color: #aecbfa !important;
+}
+
+
+/* ========================================
+   Theme Toggle
+======================================== */
+
+body.dark-mode #themeToggle {
+    background-color: #292929;
+    color: #fff;
+    border-color: #444;
+}
+
+/* =========================================
+   AREA CONVERTER RESULT
+========================================= */
+
+#areaResult {
+    opacity: 0.7;
+    color: #222;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#areaResult.show {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+#areaResult .percentage-result-title {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+}
+
+#areaResultValue {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+#areaResultDetails {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+}
+
+/* Dark Mode */
+
+body.dark-mode #areaResult {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode #areaResult .percentage-result-title,
+body.dark-mode #areaResultValue,
+body.dark-mode #areaResultDetails {
+    color: #f5f5f5 !important;
+    opacity: 1 !important;
+}
+
+/* =========================================
+   LENGTH CONVERTER RESULT
+========================================= */
+
+#lengthResult {
+    opacity: 0.7;
+    color: #222;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#lengthResult.show {
+     opacity: 1;
+    transform: translateY(-3px);
+}
+
+#lengthResult .percentage-result-title {
+    color: #222 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    opacity: 1 !important;
+}
+
+#lengthResultValue {
+    color: #222 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    margin: 10px 0 !important;
+    opacity: 1 !important;
+}
+
+#lengthResultDetails {
+    color: #222 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    opacity: 1 !important;
+}
+
+
+/* Dark Mode */
+
+body.dark-mode #lengthResult {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode #lengthResult .percentage-result-title,
+body.dark-mode #lengthResultValue,
+body.dark-mode #lengthResultDetails {
+    color: #f5f5f5 !important;
+    opacity: 1 !important;
+}
+
+/* =========================================
+   CAR & BIKE LOAN - EMI RESULT
+========================================= */
+
+#vehicleLoanResult {
+    opacity: 0.7;
+    color: #222;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#vehicleLoanResult.show {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+#vehicleLoanResult .percentage-result-title {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+}
+
+#vehicleEmiValue {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+#vehicleEmiDetails {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+/* Dark Mode */
+
+body.dark-mode #vehicleLoanResult {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode #vehicleLoanResult .percentage-result-title,
+body.dark-mode #vehicleEmiValue,
+body.dark-mode #vehicleEmiDetails {
+    color: #f5f5f5 !important;
+    opacity: 1 !important;
+}
+
+/* =========================================
+   CALORIE CALCULATOR RESULT
+========================================= */
+
+#calorieResult {
+    opacity: 0.7;
+    color: #222;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#calorieResult.show {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+#calorieResult .percentage-result-title {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-weight: 700 !important;
+}
+
+#calorieTarget {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+}
+
+#calorieDetails {
+    color: #222 !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+/* Dark Mode */
+
+body.dark-mode #calorieResult {
+    background-color: #242424 !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+    opacity: 1 !important;
+}
+
+body.dark-mode #calorieResult .percentage-result-title,
+body.dark-mode #calorieTarget,
+body.dark-mode #calorieDetails {
+    color: #f5f5f5 !important;
+    opacity: 1 !important;
+}

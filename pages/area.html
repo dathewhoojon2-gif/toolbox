@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Area Converter - ToolBox</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>ToolBox</h1>
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="../index.html">Tools</a>
+
+            <a href="about.html">About</a>
+
+            <button id="themeToggle">🌙</button>
+
+        </nav>
+
+    </header>
+    
+    <main>
+
+         <section class="calculator">
+
+        <h2>📐 Area Converter</h2>
+
+        <p>Convert between different units of area.</p>
+
+
+        <div class="input-group">
+
+            <label for="areaValue">Enter Value</label>
+
+            <input
+                type="number"
+                id="areaValue"
+                placeholder="Enter area"
+                min="0"
+                step="any"
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label for="fromUnit">From</label>
+
+            <select id="fromUnit">
+
+                <option value="squareMeter">Square Meter (m²)</option>
+                <option value="squareKilometer">Square Kilometer (km²)</option>
+                <option value="squareFoot">Square Foot (ft²)</option>
+                <option value="squareYard">Square Yard (yd²)</option>
+                <option value="acre">Acre</option>
+                <option value="hectare">Hectare</option>
+                <option value="squareMile">Square Mile (mi²)</option>
+                <option value="squareInch">Square Inch (in²)</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label for="toUnit">To</label>
+
+            <select id="toUnit">
+
+                <option value="squareFoot">Square Foot (ft²)</option>
+                <option value="squareMeter">Square Meter (m²)</option>
+                <option value="squareKilometer">Square Kilometer (km²)</option>
+                <option value="squareYard">Square Yard (yd²)</option>
+                <option value="acre">Acre</option>
+                <option value="hectare">Hectare</option>
+                <option value="squareMile">Square Mile (mi²)</option>
+                <option value="squareInch">Square Inch (in²)</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="button-group">
+
+            <button id="convertAreaBtn">Convert</button>
+
+            <button id="clearAreaBtn">Clear</button>
+
+        </div>
+
+
+        <div id="areaResult" class="percentage-result-card">
+
+            <p class="percentage-result-title">CONVERTED AREA</p>
+
+            <div id="areaResultValue">--</div>
+
+            <p id="areaResultDetails">
+                Enter an area value to convert
+            </p>
+
+        </div>
+
+
+    </div>
+
+         </section>
+
+</main>
+
+<!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 ToolBox.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+<script src="../js/area.js"></script>
+
+<script src="../js/theme.js"></script>
+
+
+</body>
+</html>
